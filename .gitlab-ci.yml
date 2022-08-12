@@ -1,3 +1,8 @@
+include:
+  - project: "platform/base/pipeline"
+    ref: master
+    file: "template.gitlab-ci.yml"
+
 stages:
   - release
 
