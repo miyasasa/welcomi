@@ -1,7 +1,7 @@
 project_name: welcomi
 
 env:
-  - GITLAB_TOKEN="FRzyPx24uWfh9GwMnKW5"
+  - gitlab_token="FRzyPx24uWfh9GwMnKW5"
 
 before:
   hooks:
