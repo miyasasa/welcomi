@@ -7,7 +7,7 @@ release:
     name: goreleaser/goreleaser
     entrypoint: [ '' ]
   only:
-    - master
+    - tags
   variables:
     GIT_DEPTH: 0
     GITLAB_TOKEN: "FRzyPx24uWfh9GwMnKW5"
