@@ -1,12 +1,10 @@
 project_name: welcomi
 
-env:
-  - gitlab_token="FRzyPx24uWfh9GwMnKW5"
-
 before:
   hooks:
     - go mod tidy
     - go mod download
+
 builds:
   - id: welcomi
     binary: welcomi
