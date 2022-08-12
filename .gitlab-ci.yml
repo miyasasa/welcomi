@@ -1,12 +1,12 @@
-include:
-  - project: "platform/base/pipeline"
-    ref: master
-    file: "template.gitlab-ci.yml"
+.only: &only
+  only:
+    - master
 
 stages:
   - release
 
 release:
+  <<: *only
   stage: release
   image:
     name: goreleaser/goreleaser
