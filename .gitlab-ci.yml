@@ -12,4 +12,4 @@ release:
     GIT_DEPTH: 0
     GITLAB_TOKEN: "FRzyPx24uWfh9GwMnKW5"
   script:
-    - goreleaser release --rm-dist
+    - goreleaser release --snapshot --rm-dist
