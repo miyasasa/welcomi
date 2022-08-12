@@ -17,10 +17,13 @@ gomod:
   proxy: true
   env:
     - GOPRIVATE=gitlab.trendyol.com
+
 checksum:
   name_template: "{{ .ProjectName }}_checksums.txt"
+
 snapshot:
   name_template: SNAPSHOT-{{.ShortCommit}}
+
 changelog:
   sort: asc
   filters:
