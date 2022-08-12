@@ -1,18 +1,13 @@
-.only: &only
-  only:
-    - master
-
 stages:
   - release
 
 release:
-  <<: *only
   stage: release
   image:
     name: goreleaser/goreleaser
-    entrypoint: ['']
+    entrypoint: [ '' ]
   only:
-    - tags
+    - master
   variables:
     GIT_DEPTH: 0
   script:
