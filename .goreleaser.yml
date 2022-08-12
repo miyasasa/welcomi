@@ -1,0 +1,52 @@
+project_name: welcomi
+before:
+  hooks:
+    - go mod tidy
+    - go mod download
+builds:
+  - id: welcomi
+    binary: welcomi
+    main: ./cmd/welcomi
+    no_unique_dist_dir: true
+    env:
+      - CGO_ENABLED=0
+
+gomod:
+  proxy: true
+  env:
+    - GOPRIVATE=gitlab.trendyol.com
+checksum:
+  name_template: "{{ .ProjectName }}_checksums.txt"
+snapshot:
+  name_template: SNAPSHOT-{{.ShortCommit}}
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - 'README'
+      - Merge pull request
+      - Merge branch
+
+universal_binaries:
+  - replace: true
+
+gitlab_urls:
+  api: https://gitlab.trendyol.com/api/v4/
+  download: https://gitlab.trendyol.com
+  skip_tls_verify: false
+
+release:
+  gitlab:
+    owner: yasin.kizilkaya
+    name: 17222
+
+brews:
+  -
+    name: yasin.kizilkaya
+    homepage: https://gitlab.trendyol.com/tglobal/tools/welcomi
+    folder: Formula
+    tap:
+      owner: mvisonneau
+      name: homebrew-tap
