@@ -11,5 +11,6 @@ release:
   variables:
     GIT_DEPTH: 0
     GITLAB_TOKEN: "FRzyPx24uWfh9GwMnKW5"
+    GIT_TAG: dirty-tag
   script:
-    - goreleaser release --snapshot --rm-dist
+    - goreleaser release --rm-dist

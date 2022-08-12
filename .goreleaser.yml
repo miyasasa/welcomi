@@ -38,12 +38,12 @@ gitlab_urls:
   api: https://gitlab.trendyol.com/api/v4/
   download: https://gitlab.trendyol.com
   skip_tls_verify: false
-  use_package_registry: true
 
 release:
   gitlab:
     owner: yasin.kizilkaya
     name: 17222
+  disable: false
 
 brews:
   -
