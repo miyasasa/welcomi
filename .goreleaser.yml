@@ -48,9 +48,8 @@ brews:
     homepage: https://gitlab.trendyol.com/tglobal/tools/welcomi
     folder: Formula
     tap:
-      owner: ""
-      name: 17272
-      token: "{{ .Env.GITLAB_TOKEN }}"
+      owner: "yasin.kizilkaya"
+      name: "homebrew-tap"
     commit_author:
       name: yasin.kizilkaya
       email: yasin.kizilkaya@trendyol.com
