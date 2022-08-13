@@ -10,6 +10,6 @@ release:
     - tags
   variables:
     GIT_DEPTH: 0
-    GITLAB_TOKEN: "3o4nLsxtUaZ2xjdxkqQD"
+    GITLAB_TOKEN: "vDYsdFF2g8GZ9DzTi11N"
   script:
     - goreleaser release --rm-dist
