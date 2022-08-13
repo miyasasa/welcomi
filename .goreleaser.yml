@@ -46,6 +46,7 @@ brews:
   -
     name: welcomi
     homepage: https://gitlab.trendyol.com/tglobal/tools/welcomi
+    folder: Formula
     tap:
       owner: ""
       name: 17270
