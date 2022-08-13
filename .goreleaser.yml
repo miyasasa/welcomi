@@ -44,9 +44,11 @@ release:
 
 brews:
   -
-    name: yasin.kizilkaya
+    name: welcomi
     homepage: https://gitlab.trendyol.com/tglobal/tools/welcomi
-    folder: Formula
     tap:
-      owner: mvisonneau
-      name: homebrew-tap
+      owner: ""
+      name: 17270
+    commit_author:
+      name: yasin.kizilkaya
+      email: yasin.kizilkaya@trendyol.com
