@@ -39,8 +39,8 @@ gitlab_urls:
 
 release:
   gitlab:
-    owner: ""
-    name: 17222
+    owner: "yasin.kizilkaya"
+    name: "homebrew-tap"
 
 brews:
   -
