@@ -50,6 +50,7 @@ brews:
     tap:
       owner: ""
       name: 17272
+      token: "{{ .Env.GITLAB_TOKEN }}"
     commit_author:
       name: yasin.kizilkaya
       email: yasin.kizilkaya@trendyol.com
