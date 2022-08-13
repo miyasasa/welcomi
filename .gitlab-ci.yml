@@ -4,7 +4,7 @@ stages:
 release:
   stage: release
   image:
-    name: goreleaser/goreleaser
+    name: goreleaser/goreleaser:v1.10.2
     entrypoint: [ '' ]
   only:
     - tags
