@@ -40,7 +40,7 @@ gitlab_urls:
 release:
   gitlab:
     owner: ""
-    name: 17272
+    name: 17222
 
 brews:
   -
