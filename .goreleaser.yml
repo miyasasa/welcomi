@@ -51,6 +51,7 @@ brews:
       owner: "yasin.kizilkaya"
       name: "homebrew-tap"
       token: "{{ .Env.GITLAB_TOKEN }}"
+    download_strategy: CurlDownloadStrategy
     commit_author:
       name: yasin.kizilkaya
       email: yasin.kizilkaya@trendyol.com
