@@ -35,7 +35,8 @@ universal_binaries:
 gitlab_urls:
   api: https://gitlab.trendyol.com/api/v4/
   download: https://gitlab.trendyol.com
-  skip_tls_verify: false
+  skip_tls_verify: true
+  use_package_registry: true
 
 release:
   gitlab:
