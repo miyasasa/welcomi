@@ -32,27 +32,14 @@ changelog:
 universal_binaries:
   - replace: true
 
-gitlab_urls:
-  api: https://gitlab.trendyol.com/api/v4/
-  download: https://gitlab.trendyol.com
-  skip_tls_verify: true
-  use_package_registry: true
-
-release:
-  gitlab:
-    owner: ""
-    name: 17222
-
 brews:
   -
     name: welcomi
-    homepage: https://gitlab.trendyol.com/tglobal/tools/welcomi
+    homepage: https://github.com/miyasasa/welcomi
     folder: Formula
     tap:
-      owner: "yasin.kizilkaya"
-      name: "homebrew-tap"
-      token: "{{ .Env.GITLAB_TOKEN }}"
-    download_strategy: CurlDownloadStrategy
+      owner: miyasasa
+      name: homebrew-tap
     commit_author:
       name: yasin.kizilkaya
-      email: yasin.kizilkaya@trendyol.com
+      email: vyasinw@gmail.com
