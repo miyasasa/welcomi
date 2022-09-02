@@ -1,29 +1,20 @@
-project_name: welcomi
-
-before:
-  hooks:
-    - go mod tidy
-    - go mod download
-
 builds:
-  - id: welcomi
-    binary: welcomi
-    main: ./cmd/welcomi
-    no_unique_dist_dir: true
-    env:
-      - CGO_ENABLED=0
+  - binary: welcomi
     goos:
       - darwin
       - linux
     goarch:
       - amd64
       - arm64
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -mod=vendor
+    dir: .
+    main: ./cmd/welcomi
 
-checksum:
-  name_template: "{{ .ProjectName }}_checksums.txt"
-
-snapshot:
-  name_template: SNAPSHOT-{{.ShortCommit}}
+release:
+  prerelease: auto
 
 universal_binaries:
   - replace: true
@@ -32,10 +23,12 @@ brews:
   -
     name: welcomi
     homepage: https://github.com/miyasasa/welcomi
-    folder: Formula
     tap:
       owner: miyasasa
       name: homebrew-tap
     commit_author:
-      name: yasin.kizilkaya
+      name: miyasasa
       email: vyasinw@gmail.com
+
+checksum:
+  name_template: 'checksums.txt'

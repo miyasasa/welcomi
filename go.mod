@@ -1,4 +1,4 @@
-module welcomi
+module github.com/miyasasa/welcomi
 
 go 1.16
 
