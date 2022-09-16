@@ -1,7 +1,7 @@
 package main
 
 import (
-	"welcomi/cmd"
+	"github.com/miyasasa/welcomi/cmd"
 )
 
 func main() {

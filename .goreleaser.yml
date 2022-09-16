@@ -1,4 +1,3 @@
-project_name: welcomi
 
 before:
   hooks:
@@ -6,28 +5,22 @@ before:
     - go mod download
 
 builds:
-  - id: welcomi
-    binary: welcomi
-    main: ./cmd/welcomi
-    no_unique_dist_dir: true
+  - binary: welcomi
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
     env:
       - CGO_ENABLED=0
+    flags:
+      - -mod=vendor
+    dir: .
+    main: ./cmd/welcomi
 
-checksum:
-  name_template: "{{ .ProjectName }}_checksums.txt"
-
-snapshot:
-  name_template: SNAPSHOT-{{.ShortCommit}}
-
-changelog:
-  sort: asc
-  filters:
-    exclude:
-      - '^docs:'
-      - '^test:'
-      - 'README'
-      - Merge pull request
-      - Merge branch
+release:
+  prerelease: auto
 
 universal_binaries:
   - replace: true
@@ -36,10 +29,12 @@ brews:
   -
     name: welcomi
     homepage: https://github.com/miyasasa/welcomi
-    folder: Formula
     tap:
       owner: miyasasa
       name: homebrew-tap
     commit_author:
-      name: yasin.kizilkaya
+      name: miyasasa
       email: vyasinw@gmail.com
+
+checksum:
+  name_template: 'checksums.txt'
